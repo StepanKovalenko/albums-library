@@ -1,0 +1,9 @@
+<form [formGroup]="albumForm" (ngSubmit)="submitAlbumForm()" class="add-album-form">
+    <mat-form-field>
+        <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="albumForm.invalid">Add album</button>
+</form>

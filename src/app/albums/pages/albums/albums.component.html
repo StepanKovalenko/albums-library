@@ -1,0 +1,9 @@
+<div class="albums">
+    <h1>Albums</h1>
+    <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let album of albums; let i = index">
+            <app-album-card [album]="album" (getAlbums)="getAlbums()"></app-album-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <button class="add-album-btn" mat-fab color="primary" (click)="openAlbumDialog()">+</button>
+</div>

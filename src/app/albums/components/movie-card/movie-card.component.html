@@ -1,0 +1,8 @@
+<mat-card>
+    <mat-card-title>{{movie.title}}</mat-card-title>
+    <mat-card-content>{{movie.description}}</mat-card-content>
+    <mat-card-actions>
+        <a mat-raised-button [href]="movie.link" target="_blank">Open movie</a>
+        <button mat-raised-button color="warn" (click)="deleteMovie()">Delete</button>
+    </mat-card-actions>
+</mat-card>

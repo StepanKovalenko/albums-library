@@ -1,0 +1,8 @@
+<mat-card>
+    <mat-card-title>{{album.title}}</mat-card-title>
+    <mat-card-content>{{album.description}}</mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button [routerLink]="['./', album.id]">Open</button>
+        <button mat-raised-button color="warn" (click)="deleteAlbum()">Delete</button>
+    </mat-card-actions>
+</mat-card>

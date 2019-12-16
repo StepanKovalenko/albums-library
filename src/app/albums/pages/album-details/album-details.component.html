@@ -1,0 +1,9 @@
+<div class="album-details">
+    <h1>{{album?.title}}</h1>
+    <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let movie of movies; let i = index">
+            <app-movie-card [movie]="movie" [album]="album" (initAlbum)="init()"></app-movie-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <button class="add-movie-btn" mat-fab color="primary" (click)="openMovieDialog()">+</button>
+</div>

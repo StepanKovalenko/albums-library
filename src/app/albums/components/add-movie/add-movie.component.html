@@ -1,0 +1,12 @@
+<form [formGroup]="movieForm" (ngSubmit)="submitMovieForm()" class="add-movie-form">
+    <mat-form-field>
+        <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Link" formControlName="link">
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="movieForm.invalid">Add movie</button>
+</form>
